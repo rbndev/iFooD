@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+body{
+    background: #ededed;
+}
+footer{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+#buttons{
+    float: right;
+    position: relative;
+}
+.add{
+    font-size: 20px;
+    margin-top: 26px;
+    color: #189a18;
+}
+.del{
+    font-size: 20px;
+    margin-top: 10px;
+    color:#842727;
+}
+#cont{
+    width: 600px;
+    margin: 0 auto;
+}
+#card-itens{
+    width: 600px;
+    height: 100px;
+    background-color: #0b152f;
+    border-radius: 17px;
+}
+#card-itens img{
+    float: left;
+}
+#card-itens:nth-child(n+2){
+    margin-top: 10px;
+}
+.img-itens{
+    float: left;
+    width: 85px;
+    height: 85px;
+    padding: 8px;
+}
+.title-itens{
+    font-family: 'Roboto', sans-serif;
+    color: #ededed;
+    position: relative;
+    margin-top: 5px;
+    float: left;
+}
+.text-itens{
+    position: absolute;
+    margin-left: 103px;
+    margin-top: 32px;
+    color: #fff;
+    float: left;
+    width: 300px;
+    text-align: justify;
+}
+#qtopizza{
+    color: #fff;
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+}
+.qto{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    top: 35px;
+    right: 70px;
+    float: right;
+    position: relative;
+}
