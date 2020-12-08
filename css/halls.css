@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body{
     background: #ededed;
 }
@@ -23,7 +23,8 @@ footer{
     color:#842727;
 }
 #cont{
-    width: 600px;
+    display: flex;
+    width: 900px;
     margin: 0 auto;
 }
 #card-itens{
@@ -53,11 +54,11 @@ footer{
 }
 .text-itens{
     position: absolute;
-    margin-left: 103px;
+    margin-left: 102px;
     margin-top: 32px;
     color: #fff;
     float: left;
-    width: 300px;
+    width: 388px;
     text-align: justify;
 }
 #buttons{
@@ -72,4 +73,65 @@ footer{
     right: 70px;
     float: right;
     position: relative;
+}
+#nome{
+    color: #ededed;
+    width: 280px;
+    height: 30px;
+    border:none;
+    border-radius: 45px;
+    background-color: #0b152f;
+    text-align: center;
+    outline: none;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    color: #ededed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    outline: none;
+}
+#compras{
+    float: left;
+}
+#pedidos{
+    float: right;
+    margin-top: 100px;
+    margin-left: 20px;   
+}
+.btn-pesquisar{
+    color: #ededed;
+    width: 250px;
+    height: 30px;
+    border:none;
+    border-radius: 45px;
+    background-color: #0b152f;
+    text-align: center;
+    outline: none;
+}
+.rowpesquisa{
+    display: flex;
+    flex-direction: row;
+}
+.lupa{
+    padding: 5px;
+    font-size: 19px;
+}
+#resultpesquisa{
+    width: 234px;
+    background: #ffffff;
+    float: right;
+    margin-right: 39px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+#title-search{
+    margin-top:5px;
+    margin-left: 10px;
+}
+#search-itens{
+    margin-top:5px;
+    margin-left: 20px;
+    margin-bottom:15px;
 }

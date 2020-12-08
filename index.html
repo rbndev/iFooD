@@ -4,83 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/halls.css" media="screen" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" 
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" 
     crossorigin="anonymous">
     <title>Mini Ifood</title>
 </head>
 <body>
     <div id="cont">
-        <input id="nome" placeholder="Seu nome" type="text"><br>
+        <div id="compras">
+            <input id="nome" placeholder="Seu nome" type="text"><br>
 
-        <br>
-        <h2>Comidas</h2>
+            <h2>Comidas</h2>
+        
+            <div id="card-itens">
+                <img src="imgs/pizza.png" alt="pizza" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Pizza</h3>
+                    <p class="text-itens">
+                        Pizza de farinha de trigo, coberto com molho de tomate e ingredientes variados que 
+                        normalmente incluem queijo, carnes preparadas ou defumadas e ervas, tudo assado em forno.
+                    </p>
+                </div>
+                <a id="qtopizza" class="qto">0</a> 
+                <div id="buttons">
+                    <i id="addpizza" class="fas fa-plus-circle add" style="cursor: pointer;"></i>
+                    <i id="delpizza" class="fas fa-minus-circle del" style="cursor: pointer;"></i>
+                </div>
+            </div>
     
-        <div id="card-itens">
-            <img src="imgs/pizza.png" alt="pizza" class="img-itens">
-            <div id="profile-itens">
-                <h3 class="title-itens">Pizza</h3>
-                <p class="text-itens">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div id="card-itens">
+                <img src="imgs/coxinha.png" alt="coxinha" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Coxinha</h3>
+                    <p class="text-itens">
+                        Uma porção de coxinha com 3 unidades , fritadas na hora em sabor de frango.
+                    </p>
+                </div>
+                <a id="qtocoxinha" class="qto">0</a>
+                <div id="buttons">
+                    <i id="addcoxinha" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
+                    <i id="delcoxinha" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
+                </div>
             </div>
-            <a id="qtopizza" class="qto">0</a> 
-            <div id="buttons">
-                <i id="addpizza" class="fas fa-plus-circle add" style="cursor: pointer;"></i>
-                <i id="delpizza" class="fas fa-minus-circle del" style="cursor: pointer;"></i>
-            </div>
-        </div>
-        <div id="card-itens">
-            <img src="imgs/coxinha.png" alt="coxinha" class="img-itens">
-            <div id="profile-itens">
-                <h3 class="title-itens">Coxinha</h3>
-                <p class="text-itens">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-            <a id="qtocoxinha" class="qto">0</a>
-            <div id="buttons">
-                <i id="addcoxinha" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
-                <i id="delcoxinha" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
-            </div>
-        </div>
-        <div id="card-itens">
-            <img src="imgs/pastel.png" alt="pastel" class="img-itens">
-            <div id="profile-itens">
-                <h3 class="title-itens">Pastel</h3>
-                <p class="text-itens">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-            <a id="qtopastel" class="qto">0</a> 
-            <div id="buttons">
-                <i id="addpastel" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
-                <i id="delpastel" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
-            </div>
-        </div>
-        <h2>Comidas</h2>
-        <div id="card-itens">
-            <img src="imgs/refrigerante.png" alt="pizza" class="img-itens">
-            Refrigerante: 
-            <a id="qtorefri">0</a> 
-            <i id="addrefri" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
-            <i id="delrefri" style="cursor: pointer;" class="fas fa-minus-circle del"></i> 
-            <br>
-        </div>
-        <div id="card-itens">
-            <img src="imgs/suco.png" alt="pizza" class="img-itens">
-            Suco: 
-            <a id="qtosuco">0</a> 
-            <i id="addsuco" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
-            <i id="delsuco" style="cursor: pointer;" class="fas fa-minus-circle del"></i> 
-            <br> 
-        </div>
-        <div id="card-itens">
-            <img src="imgs/agua.png" alt="pizza" class="img-itens">
-            Água: 
-            <a id="qtoagua">0</a>
-            <i id="addagua" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
-            <i id="delagua" style="cursor: pointer;" class="fas fa-minus-circle del"></i> 
-        </div>
     
+            <div id="card-itens">
+                <img src="imgs/pastel.png" alt="pastel" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Pastel</h3>
+                    <p class="text-itens">Pastel de tamanho único , frito na hora em sabor misto.</p>
+                </div>
+                <a id="qtopastel" class="qto">0</a> 
+                <div id="buttons">
+                    <i id="addpastel" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
+                    <i id="delpastel" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
+                </div>
+            </div>
+            
+            <h2>Bebidas</h2>
+            
+            <div id="card-itens">
+                <img src="imgs/refrigerante.png" alt="pizza" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Refrigerante</h3>
+                    <p class="text-itens">Refrigerante Lata 350ml - Coca-Cola.</p>
+                </div>
+                <a id="qtorefri" class="qto">0</a>
+                <div id="buttons">
+                    <i id="addrefri" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
+                    <i id="delrefri" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
+                </div>
+            </div>
     
-        <footer>
-            <div id="cardvalor"><b>Total:</b> R$: 0,00</div>
-            <button id="pedir">Enviar Pedido</button>
-        </footer>
+            <div id="card-itens">
+                <img src="imgs/suco.png" alt="pizza" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Suco</h3>
+                    <p class="text-itens">Copo de suco 350ml sabor Laranja.</p>
+                </div>
+                <a id="qtosuco" class="qto">0</a>
+                <div id="buttons">
+                <i id="addsuco" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
+                <i id="delsuco" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
+                </div>  
+            </div>
+    
+            <div id="card-itens">
+                <img src="imgs/agua.png" alt="pizza" class="img-itens">
+                <div id="profile-itens">
+                    <h3 class="title-itens">Água</h3>
+                    <p class="text-itens">Água mineral natural Petrópolis 500ml.</p>
+                </div> 
+                <a id="qtoagua" class="qto">0</a>
+                <div id="buttons">
+                <i id="addagua" style="cursor: pointer;" class="fas fa-plus-circle add"></i>  
+                <i id="delagua" style="cursor: pointer;" class="fas fa-minus-circle del"></i>
+                </div>
+            </div>
+        
+        
+            <footer>
+                <div id="cardvalor"><b>Total:</b> R$: 0,00</div>
+                <button id="pedir">Enviar Pedido</button>
+            </footer>
+        </div>
+        <div id="pedidos">
+            <div class="rowpesquisa">
+                <input type="text" class="btn-pesquisar" placeholder="Qual o número do seu Pedido?">
+                <i id="pesquisar" class="fas fa-search lupa"></i>
+            </div>
+            <div id="content-pesquisa"></div>
+        </div>
+       
 
     </div>
     

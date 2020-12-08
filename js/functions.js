@@ -226,3 +226,28 @@ function delagua(){
         return 0;
     }
 }
+
+var pesquisar = document.getElementById("pesquisar");
+var content = document.getElementById("content-pesquisa");
+
+pesquisar.addEventListener("click", search, true);
+
+function search() {
+    const idpedido = document.querySelector(".btn-pesquisar").value;
+    $.ajax({
+        url: "search.php",
+        type: 'POST',
+        data: `id=${idpedido}`,
+        success: function(data) {
+            if(!idpedido){
+                Swal.fire(
+                    'Sorry!',
+                    'Código de pedido inválido!',
+                    'error'
+                  )
+            }else{
+                content.innerHTML = data;
+            }
+        }
+      });
+}
