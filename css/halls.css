@@ -155,26 +155,137 @@ footer{
 }
            
 @media (max-width: 700px) {
-    #compras{
-        max-width: 700px;
-    }
     #cont{
+        width: 100%;
         max-width: 700px;
         display: flex;
         flex-direction: column;
     }
+    #compras{
+        width: 100%;
+        max-width: 600px;
+    } 
     #card-itens{
-        width: 249px;
-        height: 100px;
-        display: flex;
-        direction: column;
-        flex-wrap: wrap; 
         background-color: #0b152f;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        display: flex;
+        direction: row;
+        flex-wrap: wrap; 
         border-radius: 17px;
+        box-shadow: #0b152f 0px 0px 0.2rem,#0b152f 0px 0px 0.2rem;
+    }
+    .img-itens{
+        margin: 0 auto;
+        width: 40%;
+        max-width: 600px;
+        float: left;
+        position: relative;
     }
     #profile-itens{
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+        float: left;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .qto{
+        position: relative;
+        float: left;
+    }
+    .title-itens{
+        max-width: 90%;
+        text-align: right;
+        margin-left: 10px;
+    }
+    .text-itens{
+        max-width: 90%;
+        float: left;
+        margin-left: 10px;
+        margin-top:0px;
+        position: relative;
+    }
+    .qto{
+        color: #fff;
+        float: left;
+        position: relative;
+        max-width: 100%;
+        margin:0 auto;
+        top:0;
+        right:2px;
+    }
+    #buttons{
+        width: 100%;
+        max-width: 600px;
+        float: right;
+        position: relative;
+        padding: 15px;
+    }
+    .add{
+        position: absolute;
+        right: 25px;
+        margin-top:-60px;  
+    }
+    .del{
+        position: absolute;
+        right: 25px;
+        margin-top:-30px;
+    }
+    footer{
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    #cardvalor{
+        text-align: right;
+        max-width: 600px;
+        width: 90%;
+    }
+    #nome{
+        margin: 0 auto;
+        max-width: 600px;
+        width: 98%;
+        margin-top: 10px;
+        box-shadow: #0b152f 0px 0px 0.2rem,#0b152f 0px 0px 0.2rem;
+    }
+    #pedir{
+        height: 25px;
+        margin-top: 10px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: #265011 0px 0px 0.2rem,#265011 0px 0px 0.2rem;
+    }
+    #pedidos{
+        float: left;
+        margin-left: 0px;
+        position: relative;
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        top:-60px;
+    }
+    .btn-pesquisar{
+        max-width: 450px;
+        z-index: 10;
+        border-radius: 12px;
+        box-shadow: #0b152f 0px 0px 0.2rem, #0b152f 0px 0px 0.2rem;
+    }
+    #pesquisar{
+        text-shadow: #0b152f 0px 0px 1rem;
+        margin-left: 5px;
+        position: absolute;
+        right: 0;
+    }
+    #resultpesquisa{
+        max-width: 400px;
+        left: 9px;
+        position: absolute;
+        z-index: 1;
     }
 }
