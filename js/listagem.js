@@ -19,17 +19,25 @@ for(var el of excluir){
             confirmButtonText: 'Sim, Deletar!'
           }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-                )
                 $.ajax({
                     url: "excluir.php",
                     type: 'POST',
                     data: `id=${this.id}`,
                     success: function(data) {
-                        console.log(data);
+                      if (data != "erro") {
+                        $(`[data-id="${data}"]`).remove();
+                        Swal.fire(
+                          'Deletado!',
+                          `Pedido ${data} deletado com sucesso!`,
+                          'success'
+                        )
+                      } else {
+                        Swal.fire(
+                          'Sorry!',
+                          `Pedido ${data} não foi deletado!`,
+                          'error'
+                        )
+                      }
                     }
                   });
             }
