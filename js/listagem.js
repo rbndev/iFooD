@@ -22,6 +22,28 @@ for (var el of editar) {
             confirmButtonText: "EDITAR STATUS",
             cancelButtonText: "CANCELAR",
             preConfirm: () => {
+              $.ajax({
+                url: "edit.php",
+                type: 'POST',
+                data: `id=${this.id}&status=${$("#status option:selected").val()}`,
+                success: function(data) {
+                  if (data != "erro") {
+                    $(`#status${data}`).html($("#status option:selected").val());
+                    Swal.fire(
+                      'Editado!',
+                      `Pedido ${data} editado com sucesso!`,
+                      'success'
+                    )
+         
+                  } else {
+                    Swal.fire(
+                      'Sorry!',
+                      `Pedido ${data} não foi editado!`,
+                      'error'
+                    )
+                  }
+                }
+          });
                 
             }
     });

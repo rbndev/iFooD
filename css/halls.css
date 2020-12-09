@@ -36,6 +36,8 @@ body{
                 float: left;
             }
             .text-itens{
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
                 position: absolute;
                 margin-left: 102px;
                 margin-top: 32px;
@@ -202,6 +204,8 @@ footer{
         margin-left: 10px;
     }
     .text-itens{
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
         max-width: 90%;
         float: left;
         margin-left: 10px;

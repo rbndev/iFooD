@@ -29,7 +29,7 @@
                 # <?php 
                 $idid = $rows["id"];
                 echo $id;
-                echo " / ".$status;
+                echo " / <a id='status$id'>".$status."</a>";
                 echo "<i id='$idid' style='float:right; margin-left:10px;color:red;' class='far fa-trash-alt excluir'></i>";
                 echo "<i id='$idid' style='float:right; margin-left:5px;color: orange;' class='fas fa-user-edit editar'></i>";
                 ?>
