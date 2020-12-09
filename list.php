@@ -21,16 +21,17 @@
     while($rows = mysqli_fetch_array($get)){
         $id = $rows["id"];
         $nome = $rows["cliente"];
+        $status = $rows["status"];
     ?>
     <div id="ctn" data-id="<?php echo $id?>">
         <div id="cards" class="card text-white bg-dark mb-3" style="max-width: 18rem;">
             <div class="card-header">
                 # <?php 
                 $idid = $rows["id"];
-                echo $id; 
+                echo $id;
+                echo " / ".$status;
                 echo "<i id='$idid' style='float:right; margin-left:10px;color:red;' class='far fa-trash-alt excluir'></i>";
                 echo "<i id='$idid' style='float:right; margin-left:5px;color: orange;' class='fas fa-user-edit editar'></i>";
-                
                 ?>
             </div>
                 <div class="card-body">

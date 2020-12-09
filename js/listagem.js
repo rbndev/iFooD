@@ -3,7 +3,28 @@ var excluir = document.querySelectorAll("i.excluir");
 
 for (var el of editar) {
     el.addEventListener('click', function(){
-      console.log(this.id);
+      Swal.fire({
+        title: `Editar status ${this.id}.`,
+        icon: 'warning',
+        html: `<br><label for="status">Status:</label>
+
+              <select name="status" id="status">
+                <option value="aguardando">Aguardando Confirmação</option>
+                <option value="preparando">Preparando Comida</option>
+                <option value="saiuentrega">Saiu para Entrega</option>
+                <option value="entregue">Pedido Entregue</option>
+                <option value="cancelado">Cancelado</option>
+              </select><br>`,
+            focusConfirm: false,
+            showCancelButton: true,
+            confirmButtonColor: "rgb(69 130 44)",
+            cancelButtonColor: "#000",
+            confirmButtonText: "EDITAR STATUS",
+            cancelButtonText: "CANCELAR",
+            preConfirm: () => {
+                
+            }
+    });
     });
 }
 
