@@ -229,7 +229,13 @@ function delagua(){
 
 var pesquisar = document.getElementById("pesquisar");
 var content = document.getElementById("content-pesquisa");
-
+var inputpesquisa = document.querySelector(".btn-pesquisar");
+inputpesquisa.addEventListener("keyup", function(e){
+    var key = e.which || e.keyCode;
+    if (key == 13) { // codigo da tecla enter
+        search();
+    }
+});
 pesquisar.addEventListener("click", search, true);
 
 function search() {
