@@ -7,6 +7,8 @@
     <title>Listagem Pedidos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" 
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="css/list.css">
 </head>
 <body>
@@ -20,10 +22,16 @@
         $id = $rows["id"];
         $nome = $rows["cliente"];
     ?>
-    <div id="ctn">
+    <div id="ctn" data-id="<?php echo $id?>">
         <div id="cards" class="card text-white bg-dark mb-3" style="max-width: 18rem;">
             <div class="card-header">
-                # <?php echo $id; ?>
+                # <?php 
+                $idid = $rows["id"];
+                echo $id; 
+                echo "<i id='$idid' style='float:right; margin-left:10px;color:red;' class='far fa-trash-alt excluir'></i>";
+                echo "<i id='$idid' style='float:right; margin-left:5px;color: orange;' class='fas fa-user-edit editar'></i>";
+                
+                ?>
             </div>
                 <div class="card-body">
                     <h5 class="card-title"><?php echo  $nome?></h5>
@@ -46,12 +54,15 @@
             </div>
         </div>
         <?php
-            }// FIM Fetch array
+        }// FIM Fetch array
         ?>
     </div>
 
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/listagem.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
 </body>
 </html>
 

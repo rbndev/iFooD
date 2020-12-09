@@ -10,9 +10,9 @@ if(is_numeric($idpedido)){
         while($rows = mysqli_fetch_array($get)){
             $id = $rows["id"];
             $nome = $rows["cliente"];
-            echo "<h3 id='title-search'>#".$id . " ". $nome."</h3>";
-            }
-
+            $status = $rows["status"];
+            echo "<h3 id='title-search'>#". $id . " ". $nome."</h3>";
+            
 
             $getitens = mysqli_query($conn, "SELECT * FROM `itens` WHERE pedido = $id ");
             if(mysqli_num_rows($getitens) > 0){
@@ -26,7 +26,20 @@ if(is_numeric($idpedido)){
                     echo "</div>";
                 }
             }
-        }else{
+
+            if($status == "aguardando"){
+                echo "Status: <b style='color: blue;'>Aguardando Aprovação do Restaurante!!!</b>";
+            }elseif($status == "preparando"){
+                echo "Status: <b style='color: green;'>O Restaurante aprovou seu pedido, seu lanche está sendo preparado!!!</b>";
+            }elseif($status == "saiuentrega"){
+                echo "Status: <b style='color: blue;'>Seu pedido saiu para Entrega!!!</b>";
+            }elseif($status == "entregue"){
+                echo "Status: <b style='color: green;'>Pedido Entregue com sucesso!!!</b>";
+            }else{
+                echo "Status <b style='color: red;'>Pedido cancelado!!!</b>";
+            }
+        }
+    }else{
             echo "<p align='center'>Pedido não encontrado.</p>";
     }
 }else{
