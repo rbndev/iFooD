@@ -30,8 +30,8 @@
                 $idid = $rows["id"];
                 echo $id;
                 echo " / <a id='status$id'>".$status."</a>";
-                echo "<i id='$idid' style='float:right; margin-left:10px;color:red;' class='far fa-trash-alt excluir'></i>";
-                echo "<i id='$idid' style='float:right; margin-left:5px;color: orange;' class='fas fa-user-edit editar'></i>";
+                echo "<i id='$idid' style='float:right; margin-left:10px;color:red;cursor:pointer;' class='far fa-trash-alt excluir'></i>";
+                echo "<i id='$idid' style='float:right; margin-left:5px;color: orange;cursor:pointer;' class='fas fa-user-edit editar'></i>";
                 ?>
             </div>
                 <div class="card-body">
